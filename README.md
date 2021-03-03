@@ -1,24 +1,71 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column            | Type   | Options     |
+| --------          | ------ | ----------- |
+| last_name         | string | null: false |
+| first_name        | string | null: false |
+| email              | string | null: false, unique: true|
+| password          | string | null: false |
+| self_introduction | string | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :chat_room_users
+- has_many :chat_rooms, through: chat_room_users
+- has_many :chat_messages
+- has_many :reactions
 
-* Configuration
 
-* Database creation
+## chat_rooms テーブル
 
-* Database initialization
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- has_many :room_users
+- has_many :users, through: chat_room_users
+- has_many :messages
 
-* Deployment instructions
 
-* ...
+## chat_room_users テーブル
+
+| Column      | Type       | Options                        |
+| ------      | ---------- | ------------------------------ |
+| user        | references | null: false, foreign_key: true |
+| chat_room   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :chat_room
+- belongs_to :user
+
+
+## chat_messages テーブル
+
+| Column       | Type       | Options                        |
+| -------      | ---------- | ------------------------------ |
+| message      | string     |                                |
+| user         | references | null: false, foreign_key: true |
+| chat_room    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :chat_room
+- belongs_to :user
+
+
+## reactions テーブル
+
+| Column    | Type       | Options                        |
+| -------   | ---------- | ------------------------------ |
+| from_user | string     | null: false |
+| to_user   | string     | null: false |
+| status    | string     | null: false |
+
+### Association
+
+- belongs_to :user
