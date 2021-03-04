@@ -1,32 +1,27 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<title>Paper Stack</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body>
-<div class="container">
-  <section id="content">
-    <form action="">
-      <h1>Login Form</h1>
-      <div>
-        <input type="text" placeholder="Username" required="" id="username" />
+<div class="contents row">
+  <div class="container">
+    <h2>Log in</h2>
+    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
       </div>
-      <div>
-        <input type="password" placeholder="Password" required="" id="password" />
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
       </div>
-      <div>
-        <input type="submit" value="Log in" />
-        <a href="#">Lost your password?</a>
-        <a href="#">Register</a>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.label :remember_me %><br />
+          <%= f.check_box :remember_me %>
+        </div>
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
       </div>
-    </form><!-- form -->
-    
-  </section><!-- content -->
-</div><!-- container -->
-</body>
-</html>
+    <% end %>
+  </div>
+</div>
