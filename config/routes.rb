@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'top/index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: 'top#index'
+
+  get 'messages/index'
+  devise_for :users
+  root to: 'messages#index'
+  resources :messages, only: [:index]
+  resources :users, only: [:edit, :update]
+
 end
