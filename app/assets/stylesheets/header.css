@@ -1,88 +1,63 @@
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+/* リセットCSS */
+
+
 * {
   box-sizing: border-box;
 }
 
 .top-page-header {
-  width: 100vw;
-  padding: 2vh 15vw;
-  display: flex;
-  flex-direction: column;
+  height: 50px;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  display: flex; 
 }
 
-.search-bar-contents {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.furima-icon {
-  width: 10vw;
-  margin-right: 10vw;
-}
-
-.search-form {
-  width: 65vw;
-  height: 5vh;
-  display: flex;
-  margin-bottom: 5px;
-}
-
-.search-form>.input-box {
-  width: 100%;
-  height: 5vh;
-  padding-left: 10px;
-}
-
-.search-button {
-  width: 5vh;
-  border: 0;
-  cursor: pointer;
-  background-color: #3ccace;
-  padding: 8px;
-}
-
-.search-icon {
-  width: 100%;
-}
-
-.nav {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
+.nav-left {
+  width: 50%;
+  margin-left: 30px;
 }
 
 .lists-left {
   display: flex;
   min-width: 200px;
-
 }
 
 .category-list {
   text-decoration: none;
   margin-right: 3vw;
   color: #333333;
+  font-size: 30px;
 }
 
-.brand-list {
+.human-list {
   text-decoration: none;
   color: #333333;
+  font-size: 30px;
+}
+
+.nav-right{
+
 }
 
 .lists-right {
   display: flex;
   list-style: none;
   align-items: flex-end;
-}
-
-
-.user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
 }
 
 
@@ -102,3 +77,41 @@
   text-decoration: none;
   color: #333333;
 }
+
+
+/* first-viewクラスからbottom-contentクラスまでの要素の親要素 */
+.contents {
+  
+}
+
+.first-view{
+  height: 60vh;
+  
+}
+
+
+/* Genre紹介 */
+.middle-content{
+  height: 450px;
+ 
+  margin: 0 160px;
+}
+
+/* Mateたち */
+.bottom-content {
+  height: 800px;
+  
+  margin: 0 160px;
+}
+
+/* フッター */
+footer {
+  height: 50px;
+  
+}
+
+
+
+
+
+/*実験用のCSS(科目一覧)*/
