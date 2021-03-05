@@ -1,4 +1,65 @@
-<%= render "shared/header" %>
+<%# CSS・・・assets/stylesheets/shared/header.css %>
+ <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="top.css">
+    <title>Mate</title>
+  </head>
 
-<h1>Top#index</h1>
-<p>Find me in app/views/top/index.html.erb</p>
+<body>
+<header class='top-page-header'>
+  <div class='nav-left'>
+    <ul class='lists-left'>
+      <li><%= link_to 'Genre', "#", class: "category-list" %></li>
+      <li><%= link_to 'Mate', "#", class: "human-list" %></li>
+    </ul>
+  </div>
+  <div class='nav-right'>  
+    <ul class='lists-right'>   
+      <li><%= link_to 'Log-out', destroy_user_session_path, method: :delete, class: "logout" %> </li> 
+      <li><%= link_to 'Log-in', new_user_session_path, class: "login" %></li>
+      <li><%= link_to 'Sign-up', new_user_registration_path, class: "sign-up" %></li>
+    </ul>
+  </div>  
+</header>
+
+ <div class="contents">
+      <div class="first-view">
+       <img src="/assets/top-image2.jpeg" alt="トップ画面" class="top-image">
+      </div>
+      <div class="middle-content">
+        <!-- 『Genre一覧』を表示する -->
+        <a class="circle" href="~">English</a>
+        <a class="circle" href="~">Programming</a>
+        <a class="circle" href="~">You</a>
+
+      </div>
+      <div class="bottom-content">
+        <!-- 『Mate候補たち』を表示する -->
+          <h2 class="heading-name">Mate</h2>
+        <ul class="mate-list">
+          <li>
+            <img src="/assets/mate-pic1.webp" alt="mate1" class="mate-image">
+            <h4 class="mate-name">aaa</h4>
+          </li>
+          <li>
+            <img src="/assets/mate-pic2.jpg" alt="mate2" class="mate-image">
+            <h4 class="mate-name">bbb</h4>
+          </li>
+          <li>
+            <img src="/assets/mate-pic3.jpeg" alt="mate3" class="mate-image">
+            <h4 class="mate-name">ccc</h4>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+    </footer>
+
+
+</body>
+
+ 
+
+
+
