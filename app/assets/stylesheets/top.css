@@ -85,26 +85,56 @@ ul,li {
 }
 
 .first-view{
-  height: 60vh;
+  height: 90vh;
 }
 
 .top-image {
- 
+  height: 100%;
+  width: 100%
 }
 
 
 /* Genre紹介 */
 .middle-content{
-  height: 450px;
- 
+  height: 550px;
   margin: 0 160px;
 }
+
+.circle{
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: skyblue;
+  text-align:center;
+  line-height: 400px;
+  font-size: 60px;
+}
+
 
 /* Mateたち */
 .bottom-content {
   height: 800px;
-  
   margin: 0 160px;
+}
+
+.heading-name {
+  font-size: 30px;
+}
+
+.mate-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0;
+}
+
+.mate-image {
+  height: 300px;
+}
+
+.mate-name {
+  font-size: 16px;
+  text-align: center;
 }
 
 /* フッター */
