@@ -6,11 +6,6 @@
  * ========================================================================== */
 /*
  * Correct `block` display not defined in IE 8/9. */
-article,
-aside,
-details,
-figcaption,
-figure,
 footer,
 header,
 hgroup,
@@ -21,118 +16,9 @@ summary {
   display: block;
 }
 
-/*
- * Correct `inline-block` display not defined in IE 8/9. */
-audio,
-canvas,
-video {
-  display: inline-block;
-}
 
-/*
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices. */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
 
-/*
- * Address `[hidden]` styling not present in IE 8/9.
- * Hide the `template` element in IE, Safari, and Firefox < 22. */
-[hidden],
-template {
-  display: none;
-}
 
-/* ==========================================================================
- * Base
- * ========================================================================== */
-/*
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom. */
-html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
-
-/*
- * Remove default margin. */
-body {
-  margin: 0;
-}
-
-/* ==========================================================================
- * Links
- * ========================================================================== */
-/*
- * Remove the gray background color from active links in IE 10. */
-a {
-  background: transparent;
-}
-
-/*
- * Address `outline` inconsistency between Chrome and other browsers. */
-a:focus {
-  outline: thin dotted;
-}
-
-/*
- * Improve readability when focused and also mouse hovered in all browsers. */
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* ==========================================================================
- * Typography
- * ========================================================================== */
-/*
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome. */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/*
- * Address styling not present in IE 8/9, Safari 5, and Chrome. */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/*
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
-b,
-strong {
-  font-weight: bold;
-}
-
-/*
- * Address styling not present in Safari 5 and Chrome. */
-dfn {
-  font-style: italic;
-}
-
-/*
- * Address differences between Firefox and other browsers. */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/*
- * Address styling not present in IE 8/9. */
-mark {
-  background: yellow;
-  color: black;
-}
 
 /*
  * Correct font family set oddly in Safari 5 and Chrome. */
@@ -947,113 +833,27 @@ div.contents.row div.content_post p {
   text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
 }
 
-div.contents.row div.content_post span.name {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  z-index: 2;
-  font-size: 13px;
-}
 
-div.contents.row div.content_post span.name a {
-  display: block;
-  color: #aaa;
-}
 
-div.contents.row div.content_post span.name a:hover {
-  text-decoration: underline;
-  color: #aaa;
-}
 
-div.contents.row div.content_post span.name span {
-  font-size: 9px;
-  display: block;
-}
 
-div.contents.row .success {
-  margin: 20px 0;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: white;
-  box-sizing: border-box;
+
+
+
+
+/* センタリング */
+.account-profile-image {
   text-align: center;
+  
 }
 
-div.contents.row .success h3 {
-  margin: 10px auto;
+/* 画像サイズを 30px 四方に設定して、object-fit: cover で真ん中で切り抜き */
+.account-profile-image img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  border-radius: 0.7rem;
 }
 
-form input,
-form textarea {
-  width: 100%;
-  margin: 5px 0 15px;
-  padding: 10px;
-  border: 1px solid #D8D8D8;
-  border-radius: 5px;
-  font-family: "游ゴシック", "YuGothic";
-}
 
-form input[type="submit"] {
-  background-color: #57C3E9;
-  border-radius: 20px;
-  color: #fff;
-  border: 0;
-  font-size: 18px;
-}
 
-form input[type="submit"]:hover {
-  background-color: #84d3ef;
-}
-
-.container {
-  margin: 20px 0;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: white;
-  box-sizing: border-box;
-}
-
-.container h3 {
-  margin: 0 0 20px;
-  text-align: center;
-  font-weight: normal;
-  font-size: 20px;
-  color: #666;
-}
-
-.comments {
-  padding: 5px;
-  margin-top: 15px;
-}
-
-.comments a {
-  color: #57C3E9;
-}
-
-.comments a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  margin: 30px auto;
-  padding: 10px;
-  color: #D8D8D8;
-}
-
-footer p {
-  text-align: center;
-}
-
-.search-form {
-  text-align: center;
-  padding-top: 32px;
-}
-
-.search-form .search-input {
-  width: 30%;
-  margin-right: 10px;
-}
-
-.search-form .search-btn {
-  width: 10%;
-}

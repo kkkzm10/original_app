@@ -1,7 +1,7 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
  <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="top.css">
+    <link rel="stylesheet" href="user.css">
     <title>Mate</title>
   </head>
 
@@ -10,14 +10,18 @@
   <div class='nav-left'>
     <ul class='lists-left'>
       <li><%= link_to 'Genre', "#", class: "category-list" %></li>
-      <li><%= link_to 'Mate', "#", class: "human-list" %></li>
+      <li><%= link_to 'Mate', users_path, class: "human-list" %></li>
     </ul>
   </div>
   <div class='nav-right'>  
     <ul class='lists-right'>   
-      <li><%= link_to 'Log-out', destroy_user_session_path, method: :delete, class: "logout" %> </li> 
+     <% if user_signed_in? %>     
+      <li><%= link_to 'Log-out', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+      <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+     <% else %> 
       <li><%= link_to 'Log-in', new_user_session_path, class: "login" %></li>
       <li><%= link_to 'Sign-up', new_user_registration_path, class: "sign-up" %></li>
+     <% end %>  
     </ul>
   </div>  
 </header>
@@ -28,9 +32,10 @@
       </div>
       <div class="middle-content">
         <!-- 『Genre一覧』を表示する -->
-        <a class="circle" href="~">English</a>
-        <a class="circle" href="~">Programming</a>
-        <a class="circle" href="~">You</a>
+        <%= link_to 'English', users_path, class: 'circle' %> 
+        <%= link_to 'Programming', users_path, class: 'circle' %> 
+        <%= link_to 'Chinese', users_path, class: 'circle' %> 
+
 
       </div>
       <div class="bottom-content">
