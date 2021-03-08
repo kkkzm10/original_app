@@ -29,7 +29,7 @@ ul,li {
 
 .nav-left {
   width: 50%;
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .lists-left {
@@ -51,7 +51,7 @@ ul,li {
 }
 
 .nav-right{
-  
+  margin-left: 100px;
 }
 
 .lists-right {
@@ -89,7 +89,7 @@ ul,li {
 }
 
 .top-image {
-  height: 100%;
+  height: 90%;
   width: 100%
 }
 
