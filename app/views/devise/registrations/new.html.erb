@@ -38,6 +38,11 @@
         <%= f.text_area :self_introduction, class:"items-text", id:"item-info", placeholder:"Tell us about yourself and what you want to learn!" ,rows:"7" ,maxlength:"1000" %>
       </div>
 
+      <div class="field">
+       <%= f.label :image %><br/>
+       <%= f.file_field :image %>
+      </div>
+
       
 
       <div class="actions">
