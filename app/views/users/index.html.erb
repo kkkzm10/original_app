@@ -1,3 +1,10 @@
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー一覧</title>
+    <link rel="stylesheet" href="userIndex.css">
+</head>
+
+<body>
 <div class="main users-index">
   <div class="container">
     <h1 class="users-heading">User List</h1>
@@ -6,17 +13,17 @@
       <div class="users-index-item">
         <div class="user-right">
           <!-- 下記のコードでユーザーを表示 -->
-        <div class="account-profile-iamge d-flex flex-column">  
+        <div class="account-profile-image d-flex flex-column">  
           <% if user.image? %>      
             <%= image_tag user.image.url %>
          <% end %>
-        </div> 
-          <%= link_to(user.last_name, user_path(user.id)) %>
-          <%= link_to(user.first_name, user_path(user.id)) %>
-          <%= link_to(user.self_introduction, user_path(user.id)) %>
+        </div>
+         
        </div>
       </div>
    <% end %>
 
   </div>
 </div>
+
+</body>
