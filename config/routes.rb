@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :mates, only:[:index, :show]
   resources :messages, only: [:index]
   resources :users, only: [:index, :show, :edit, :update]
+  resources :rooms, only: [:new, :create]
 end
