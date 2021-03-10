@@ -1,11 +1,26 @@
-<div class="main user-show">
-  <div class="container">
-    <div class="user">
-      <h2><%= @user.last_name %></h2>
-      <h2><%= @user.first_name %></h2>
-      <p><%= @user.email %></p>
-      <h2><%= @user.self_introduction %></h2>
-      <h2><%= @user.image %></h2>
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザー詳細</title>
+    <link rel="stylesheet" href="userShow.css">
+</head>
+
+<body>
+<div class="text-center">
+    <%= image_tag @user.image.url, class: "image" %> 
+</div>    
+<div class="text-center" id = "user-description">
+    <%= @user.last_name %> 
+     <br><%= @user.self_introduction %><br>
+     <% if user_signed_in? %> 
+       <div id="follow_form">
+        <% if current_user.following?(@user) %> 
+         <div id="liked.btn.btn-default"> いいね済</div>
+        <% else %> 
+         <%= render 'follow', {relationship: @relationship} %> 
+        <% end %>
+     <% end %>           
+     
     </div>
-  </div>
+   </div>   
 </div>
+</body>      

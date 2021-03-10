@@ -4,7 +4,7 @@ class ImageUploader < CarrierWave::Uploader::Base
    include CarrierWave::MiniMagick
 
    #サムネイルの為に画像をリサイズ
-     #process resize_to_fit: [100, 100] 
+     process resize_to_fit: [100, 100] 
     
   # Choose what kind of storage to use for this uploader:
   storage :file

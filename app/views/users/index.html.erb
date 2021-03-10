@@ -19,6 +19,12 @@
          <% end %>
         </div>
          
+         <div class="user-info"> 
+          <%= link_to(user.last_name, user_path(user.id)) %>
+          <%= link_to(user.first_name, user_path(user.id)) %>
+          <%= link_to(user.self_introduction, user_path(user.id)) %>
+        </div> 
+
        </div>
       </div>
    <% end %>
