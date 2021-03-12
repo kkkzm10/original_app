@@ -2,6 +2,12 @@
   font-size: 30px;
 }
 
+.user-right {
+  float: left;
+  margin-bottom: 50px;
+}
+
+
 /* センタリング */
 .account-profile-image {
   text-align: center;

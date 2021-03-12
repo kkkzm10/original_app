@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+protect_from_forgery prepend: true
+
   def index
     @message = Message.new
     @room = Room.find(params[:room_id])

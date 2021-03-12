@@ -2,6 +2,7 @@
     <meta charset="UTF-8">
     <title>ユーザー詳細</title>
     <link rel="stylesheet" href="userShow.css">
+    <script type="text/javascript" src="javascript/create.js.erb"></script>
 </head>
 
 <body>
@@ -12,15 +13,20 @@
     <%= @user.last_name %> 
      <br><%= @user.self_introduction %><br>
      <% if user_signed_in? %> 
+      <% if @user != current_user %>
        <div id="follow_form">
         <% if current_user.following?(@user) %> 
-         <div id="liked.btn.btn-default"> いいね済</div>
+          <div class="liked.btn.btn-default">Liked</div>
         <% else %> 
          <%= render 'follow', {relationship: @relationship} %> 
         <% end %>
-     <% end %>           
-     
-    </div>
+      </div> 
+      <% end %>
+     <% end %>  
+     <div class="chat-room">
+      <%= link_to("Start Chat", new_room_path) %>    
+     </div>      
+    
    </div>   
 </div>
 </body>      

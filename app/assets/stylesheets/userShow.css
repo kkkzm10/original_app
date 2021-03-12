@@ -3,4 +3,13 @@
   width: 500px;
   object-fit: cover;
   border-radius: 0.7rem;
+  margin-top: 50px;
 }
+
+.chat-room {
+  font-size: 35px;
+  margin-top: 30px;
+}
+
+
+

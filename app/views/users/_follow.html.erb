@@ -1,4 +1,5 @@
  <%= form_with model: relationship, remote: true do |f| %> 
-    <div><%= f.hidden_field :following_id, value: @user.id %></div>
+    <div><%= f.hidden_field :following_id, value: @user.id %>
     <%= f.submit "LIKE", class: "btn btn-primary" %>  
+    </div>
   <% end %>  

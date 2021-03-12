@@ -58,5 +58,5 @@ gem 'image_processing', '~> 1.2'
 gem 'carrierwave'
 gem 'pry-rails'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
-gem 'jquery-rails'
+
 gem 'haml-rails'

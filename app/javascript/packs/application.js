@@ -8,8 +8,12 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("../top.js")
-//= require jquery
-//= require bootstrap-sprockets
+require("video.js")
+
+require("jquery")
+require("../create.js.erb")
+
+require("bootstrap-sprockets")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
