@@ -125,6 +125,7 @@ ul,li {
   font-size: 60px;
   margin-top: 50px;
   margin-right: 45px;
+  font-family: 'Amatic SC', cursive;
 }
 
 
@@ -135,7 +136,8 @@ ul,li {
 }
 
 .heading-name {
-  font-size: 30px;
+  font-size: 45px;
+  font-family: 'Amatic SC', cursive;
 }
 
 .mate-list {
@@ -149,16 +151,12 @@ ul,li {
 }
 
 .mate-name {
-  font-size: 16px;
+  font-size: 22px;
   text-align: center;
+  font-family: 'Amatic SC', cursive;
 }
 
 /* フッター */
-footer {
-  height: 100px;
-  
-}
-
 
 
 
@@ -178,6 +176,7 @@ footer {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
+  font-family: 'Amatic SC', cursive;
 }
 
 .user-lists {
@@ -205,6 +204,7 @@ footer {
 
 .subtitle {
   font-size: 25px;
+  font-family: 'Amatic SC', cursive;
 }
 
 
