@@ -2,6 +2,12 @@
   font-size: 30px;
 }
 
+.user-right {
+  float: left;
+  margin-bottom: 50px;
+}
+
+
 /* センタリング */
 .account-profile-image {
   text-align: center;
@@ -9,7 +15,7 @@
 
 /* 画像サイズを 30px 四方に設定して、object-fit: cover で真ん中で切り抜き */
 .account-profile-image img {
-  height: 130px;
+  height: 300px;
   width: 130px;
   object-fit: cover;
   border-radius: 0.7rem;

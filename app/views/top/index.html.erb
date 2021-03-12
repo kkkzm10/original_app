@@ -1,7 +1,8 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
  <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" type="text/css" href="css/top.css"/>
+   <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700 rel="stylesheet">
     <title>Mate</title>
   </head>
 
@@ -16,8 +17,9 @@
   <div class='nav-right'>  
     <ul class='lists-right'>   
      <% if user_signed_in? %>     
+      <li><%= link_to current_user.last_name, "#", class: "user-last-name" %> </li> 
       <li><%= link_to 'Log-out', destroy_user_session_path, method: :delete, class: "logout" %></li> 
-      <li><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+      <li><%= link_to 'Profile', edit_user_registration_path, class: "profile" %></li>
      <% else %> 
       <li><%= link_to 'Log-in', new_user_session_path, class: "login" %></li>
       <li><%= link_to 'Sign-up', new_user_registration_path, class: "sign-up" %></li>
@@ -27,9 +29,9 @@
 </header>
 
  <div class="contents">
-      <div class="first-view">
-       <img src="/assets/top-image2.jpeg" alt="トップ画面" class="top-image">
-      </div>
+     <div class="first-view">
+         <li><img src="/assets/top-image2.jpeg" alt="image1" class="top-image" /></li>
+     </div>
       <div class="middle-content">
         <!-- 『Genre一覧』を表示する -->
         <%= link_to 'English', users_path, class: 'circle' %> 
@@ -38,28 +40,63 @@
 
 
       </div>
+
+      <!-- 『Mate候補たち』を表示する -->
       <div class="bottom-content">
-        <!-- 『Mate候補たち』を表示する -->
-          <h2 class="heading-name">Mate</h2>
+        <h2 class="heading-name">Recommended Mate</h2>
         <ul class="mate-list">
           <li>
             <img src="/assets/mate-pic1.webp" alt="mate1" class="mate-image">
-            <h4 class="mate-name">aaa</h4>
+            <h4 class="mate-name">kane</h4>
           </li>
           <li>
             <img src="/assets/mate-pic2.jpg" alt="mate2" class="mate-image">
-            <h4 class="mate-name">bbb</h4>
+            <h4 class="mate-name">Mary</h4>
           </li>
           <li>
             <img src="/assets/mate-pic3.jpeg" alt="mate3" class="mate-image">
-            <h4 class="mate-name">ccc</h4>
+            <h4 class="mate-name">Juliana</h4>
           </li>
         </ul>
       </div>
     </div>
 
-    <footer>
-    </footer>
+
+<%# furimaの参考コード %>
+    <div class='user-contents'>
+    <h2 class='title'>Mate</h2>
+    <%= link_to 'User-List', "#", class: "subtitle" %>
+    <ul class='user-lists'>
+      <% @users.each do |user| %>
+      <li class='list'>
+        <%= link_to user_path(user.id) do %>
+        <div class='user-img-content'>
+           <% if user.image? %>   
+            <%= image_tag user.image.url, class: "user-img" %>
+           <% end %>
+        </div>
+        <div class='user-info'>
+          <%= user.last_name %>
+        </div>
+       <% end %>
+      </li>
+     <% end %> 
+   </div>  
+<%# furimaの参考コード %>
+
+<footer>
+ <div class="logo">
+  JE SUIS TOUJOURS A COTE DE VOUS
+ </div>
+ <ul class="nav">
+        <li class="nav-nav">WORKS</li>
+        <li class="nav-nav">BLOG</li>
+        <li class="nav-nav">RECRUIT</li>
+        <li class="nav-nav">COMPANY</li>
+        <li class="nav-nav">CONTACT</li>
+      </ul> 
+  
+</footer>
 
 
 </body>

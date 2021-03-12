@@ -15,7 +15,7 @@
 - has_many :chat_room_users
 - has_many :chat_rooms, through: chat_room_users
 - has_many :chat_messages
-- has_many :reactions
+- has_many :relationships
 
 
 ## chat_rooms テーブル
@@ -58,7 +58,7 @@
 - belongs_to :user
 
 
-## reactions テーブル
+## relationships テーブル
 
 | Column    | Type       | Options                        |
 | -------   | ---------- | ------------------------------ |

@@ -5,13 +5,19 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_many :room_users
-         has_many :rooms, through: :room_users
-         has_many :messages
+         has_many :rooms, through: :room_users, dependent: :destroy
+         has_many :messages, dependent: :destroy
+         has_many :active_relationships, class_name:  "Relationship", foreign_key: "follower_id", dependent: :destroy
+         has_many :following, through: :active_relationships
          
-         attr_accessor :image_cache
          mount_uploader :image, ImageUploader
+         validates :image, presence: true
 
          validates :last_name, presence: true
          validates :first_name, presence: true
          validates :self_introduction, presence: true, length: { maximum: 1000 }
+
+         def following?(other_user)
+          following.include?(other_user)
+        end
 end
