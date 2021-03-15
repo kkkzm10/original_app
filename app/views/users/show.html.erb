@@ -6,6 +6,8 @@
 </head>
 
 <body>
+<div class="show-page">
+ <div class="bg">
 <div class="text-center">
     <%= image_tag @user.image.url, class: "image" %> 
 </div>    
@@ -24,9 +26,12 @@
       <% end %>
      <% end %>  
      <div class="chat-room">
-      <%= link_to("Start Chat", new_room_path) %>    
+     <% unless @user.id == current_user.id %>
+      <%= link_to("Start Chat", new_room_path) %>  
+     <% end %>   
      </div>      
-    
+    </div>  
    </div>   
+</div>
 </div>
 </body>      
