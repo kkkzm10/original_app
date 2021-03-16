@@ -11,8 +11,8 @@ class User < ApplicationRecord
          has_many :following, through: :active_relationships
          
          mount_uploader :image, ImageUploader
+         validates :image, presence: true
          
-
          validates :last_name, presence: true
          validates :first_name, presence: true
          validates :self_introduction, presence: true, length: { maximum: 1000 }

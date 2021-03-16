@@ -18,7 +18,7 @@
       <% if @user != current_user %>
        <div id="follow_form">
         <% if current_user.following?(@user) %> 
-          <div class="liked.btn.btn-default">Liked</div>
+          <div id="liked.btn.btn-default">Liked</div>
         <% else %> 
          <%= render 'follow', {relationship: @relationship} %> 
         <% end %>
@@ -34,4 +34,8 @@
    </div>   
 </div>
 </div>
-</body>      
+
+
+<%= render "devise/shared/footer" %>
+
+</body>
