@@ -1,6 +1,5 @@
 class RelationshipsController < ApplicationController
   def create
-    binding.pry
     current_user.active_relationships.create(create_params)
   end
 
