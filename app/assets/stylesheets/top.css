@@ -80,15 +80,17 @@ ul,li {
 }
 
 .login {
+  font-size: 30px;
+  margin-right: 30px;
   text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
+  
 }
 
 .sign-up {
+  font-size: 30px;
+  margin-right: 30px;
   text-decoration: none;
-  color: #333333;
+  
 }
 
 
@@ -110,10 +112,10 @@ ul,li {
 
 .top-image p {
   position: absolute;
-  color: #00CC00;
+  color: black;
   font-weight: bold; /*太字に*/
-  font-size: 130px;
-  font-family: 'Cherry Swash', cursive;
+  font-size: 90px;
+  font-family :Quicksand, sans-serif;/*Google Font*/
   top: 15%;
   left: 50%;
   transform: translate(-50%,-50%);

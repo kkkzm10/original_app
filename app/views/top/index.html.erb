@@ -24,6 +24,7 @@
      <% else %> 
       <li><%= link_to 'Log-in', new_user_session_path, class: "login" %></li>
       <li><%= link_to 'Sign-up', new_user_registration_path, class: "sign-up" %></li>
+      <li><%= link_to 'Guest', users_guest_sign_in_path, method: :post, class: "login" %></li>
      <% end %>  
     </ul>
   </div>  

@@ -11,7 +11,7 @@ class User < ApplicationRecord
          has_many :following, through: :active_relationships
          
          mount_uploader :image, ImageUploader
-         validates :image, presence: true
+         
 
          validates :last_name, presence: true
          validates :first_name, presence: true
@@ -20,4 +20,15 @@ class User < ApplicationRecord
          def following?(other_user)
           following.include?(other_user)
         end
+
+        def self.guest
+          find_or_create_by!(email: 'test@testtest9.com') do |user|
+            user.password = SecureRandom.urlsafe_base64
+            user.password_confirmation = user.password
+            user.last_name = 'yamada'
+            user.first_name = 'taro'
+            user.self_introduction = 'Hello'
+            user.image = 'mate-pic2.jpg'
+         end
+      end   
 end
