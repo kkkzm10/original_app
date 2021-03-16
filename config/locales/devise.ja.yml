@@ -1,9 +1,4 @@
 ja:
-  time:
-    formats:
-      default: "%Y/%m/%d %H:%M:%S"
-
-ja:
   activerecord:
     attributes:
       user:
@@ -145,4 +140,4 @@ ja:
       not_locked: はロックされていません。
       not_saved:
         one: エラーが発生したため %{resource} は保存されませんでした。
-        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"     
+        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"
