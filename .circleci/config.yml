@@ -8,19 +8,19 @@ jobs:
         - RAILS_ENV: ‘test’
         - MYSQL_HOST: 127.0.0.1
         - MYSQL_USERNAME: ‘root’
-        - MYSQL_PASSWORD: ‘’
+        - MYSQL_ROOT_PASSWORD
         - MYSQL_PORT: 3306
     - image: circleci/mysql:5.7
       environment:
         - MYSQL_ALLOW_EMPTY_PASSWORD: ‘true’
         - MYSQL_ROOT_HOST: ‘%’
-        - MYSQL_DATABASE: ci_rails_original_app
+        - MYSQL_DATABASE: ci_rails_original_app_test
     working_directory: ~/repo
     steps:
     - checkout
     - restore_cache:
         keys:
-        - v1-dependencies-{{ checksum 'Gemfile.lock' }}
+        - v1-dependencies-{{ checksum "Gemfile.lock" }}
         - v1-dependencies-
     - run:
         name: install dependencies
@@ -30,7 +30,7 @@ jobs:
     - save_cache:
         paths:
         - ./vendor/bundle
-        key: v1-dependencies-{{ checksum 'Gemfile.lock' }}
+        key: v1-dependencies-{{ checksum "Gemfile.lock" }}
     # Database setup
     - run:
         name: Use specific database.yml # CircleCI用のデータベース設定を使う
