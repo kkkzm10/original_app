@@ -1,12 +1,12 @@
 .show-page {
   height: 100%;
   display: block;
-  background-image: url("/assets/back-image10.jpeg")
+  
 }
 
 .bg {
   height: 100%;
-  background: rgba(255,255,255,0.6);
+  
 }
 
 .image {
@@ -19,10 +19,13 @@
 
 .text-center {
   font-size: 35px;
+  font-family: 'Amatic SC', cursive;
+  color: white;
 }
 
-.text-center > liked.btn.btn-default  {
-  width:50px;
+#follow_form  {
+  margin-left: 800px;
+  width:30px;
   height:30px;
   color:blue;
   border-radius:20px;
@@ -31,4 +34,5 @@
 .chat-room {
   font-size: 35px;
   margin-top: 30px;
+  color: coral;
 }
