@@ -19,7 +19,9 @@
 
 .text-center {
   font-size: 35px;
-  font-family: 'Amatic SC', cursive;
+
+  font-family :Quicksand, sans-serif;/*Google Font*/
+
   color: white;
 }
 
