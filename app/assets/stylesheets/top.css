@@ -95,9 +95,6 @@ ul,li {
 
 
 /* first-viewクラスからbottom-contentクラスまでの要素の親要素 */
-.contents {
-  
-}
 
 .first-view{
   height: 130vh;
