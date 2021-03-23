@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <title>ユーザー詳細</title>
     <link rel="stylesheet" href="userShow.css">
-    <script type="text/javascript" src="javascript/create.js.erb"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
       <% if @user != current_user %>
        <div id="follow_form">
         <% if current_user.following?(@user) %> 
-          <div id="liked.btn.btn-default">Liked</div>
+          <button id="liked.btn.btn-default">Liked</button>
         <% else %> 
          <%= render 'follow', {relationship: @relationship} %> 
         <% end %>
@@ -36,6 +36,7 @@
 </div>
 
 
-<%= render "devise/shared/footer" %>
 
+
+<script type="text/javascript" src="javascript/create.js.erb"></script>
 </body>
