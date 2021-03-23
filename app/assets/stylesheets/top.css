@@ -180,12 +180,9 @@ ul,li {
   font-family: 'Amatic SC', cursive;
 }
 
-/* フッター */
 
 
 
-
-/*実験用のCSS(科目一覧)*/
 
 .user-contents {
   background-color: #FFF;
@@ -202,7 +199,7 @@ ul,li {
   font-size: 5vh;
   line-height: 1.4;
   font-weight: bold;
-  font-family: 'Amatic SC', cursive;
+  font-family :Quicksand, sans-serif;/*Google Font*/
 }
 
 .user-lists {
@@ -233,16 +230,15 @@ ul,li {
   font-family: 'Amatic SC', cursive;
 }
 
-
 .user-info {
   background-color: #FFF;
   color: black;
   padding: 1vw;
-  font-family: 'Amatic SC', cursive;
+  font-family :Quicksand, sans-serif;/*Google Font*/
 }
 
 
-/*footerの実験*/
+/*footer*/
 footer {
   height: 150px;
   background-color: #f0f0f0;
