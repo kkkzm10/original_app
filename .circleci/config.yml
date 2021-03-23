@@ -1,15 +1,23 @@
 version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2 
-
 jobs:
   build:
     docker:
       - image: circleci/ruby:2.6.5-node-browsers
+        environment:
+          BUNDLER_VERSION: 2.0.1
     executor: ruby/default
     steps:
       - checkout
       - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+          name: setup bundler
+          command: |
+            sudo gem update --system
+            sudo gem uninstall bundler
+            sudo rm /usr/local/bin/bundle
+            sudo rm /usr/local/bin/bundler
+            sudo gem install bundler
+
+       - run:
+          name: install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
