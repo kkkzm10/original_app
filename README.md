@@ -27,6 +27,14 @@
 
 
 # 利用方法
+- トップページから新規登録、ログイン（ゲストログインあり）
+- トップページにある学習分野、またはページ下部のMate一覧から、チャットしたい相手を選ぶ
+- Mateの名前か画像をクリックすると、詳細ページへ遷移する
+- Start chatボタンを押してトークルームを作り、相手とチャットやビデオ通話ができる
+
+[![Image from Gyazo](https://i.gyazo.com/82de91d37eeeb6a0a22d2c42786b7a9e.gif)](https://gyazo.com/82de91d37eeeb6a0a22d2c42786b7a9e)
+[![Image from Gyazo](https://i.gyazo.com/5c8af653f78bd4825c96a9ff4443f330.gif)](https://gyazo.com/5c8af653f78bd4825c96a9ff4443f330)
+[![Image from Gyazo](https://i.gyazo.com/02ae8cb15f9509e7f6bdeb646587d34a.gif)](https://gyazo.com/02ae8cb15f9509e7f6bdeb646587d34a)
 
 
 # 目指した課題解決
