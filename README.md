@@ -32,6 +32,7 @@
 - Mateの名前か画像をクリックすると、Mateの詳細ページへ遷移する
 - Start chatボタンを押してトークルームを作り、相手とチャットやビデオ通話ができる
 
+![demo](https://i.gyazo.com/82de91d37eeeb6a0a22d2c42786b7a9e.gif/raw)
 [![Image from Gyazo](https://i.gyazo.com/82de91d37eeeb6a0a22d2c42786b7a9e.gif)](https://gyazo.com/82de91d37eeeb6a0a22d2c42786b7a9e)
 [![Image from Gyazo](https://i.gyazo.com/5c8af653f78bd4825c96a9ff4443f330.gif)](https://gyazo.com/5c8af653f78bd4825c96a9ff4443f330)
 [![Image from Gyazo](https://i.gyazo.com/02ae8cb15f9509e7f6bdeb646587d34a.gif)](https://gyazo.com/02ae8cb15f9509e7f6bdeb646587d34a)
