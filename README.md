@@ -25,6 +25,11 @@
 - VScode
 - Heroku
 
+# 本番環境
+- URL: https://kkkzmmate-app.herokuapp.com/
+- ログインEメール：test@test.com
+- ログインパスワード：guiyang10
+
 
 # 利用方法
 - トップページから新規登録、ログイン（ゲストログインあり）
