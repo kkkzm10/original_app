@@ -2,8 +2,8 @@
  <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/top.css"/>
-   <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700 rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Cherry+Swash:700 rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Cherry+Swash:700" rel="stylesheet">
     <title>Mate</title>
   </head>
 
@@ -32,7 +32,7 @@
 
  <div class="contents">
    <div class="top-image">
-   <img src="/assets/top-image4.jpeg" alt="image1" class="top-image" />
+    <%= image_tag "top-image4.jpeg", alt:"image1", class:"top-image" %>
    <p>Find your Mate</p>
    <span>
    <%= link_to 'English', users_path, class: 'circle' %> 
@@ -47,15 +47,15 @@
         <h2 class="heading-name">Recommend for you</h2>
         <ul class="mate-list">
           <li>
-            <img src="/assets/mate-pic1.webp" alt="mate1" class="mate-image">
+            <%= image_tag "mate-pic1.webp", alt:"mate1", class:"mate-image" %>
             <h4 class="mate-name">kane</h4>
           </li>
           <li>
-            <img src="/assets/mate-pic2.jpg" alt="mate2" class="mate-image">
+             <%= image_tag "mate-pic2.jpg", alt:"mate2", class:"mate-image" %>
             <h4 class="mate-name">Mary</h4>
           </li>
           <li>
-            <img src="/assets/mate-pic3.jpeg" alt="mate3" class="mate-image">
+             <%= image_tag "mate-pic3.jpeg", alt:"mate3", class:"mate-image" %>
             <h4 class="mate-name">Juliana</h4>
           </li>
         </ul>
