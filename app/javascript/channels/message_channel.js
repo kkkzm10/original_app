@@ -10,8 +10,11 @@ const appMessage = consumer.subscriptions.create("MessageChannel", {
   },
 
   received(data) {
+    const html = `<p>${data.content.text}</p>`;
     const messages = document.getElementById('messages');
-    messages.insertAdjacentHTML('beforeend', data['message']);
+    const newMessage = document.getElementById('message_text');
+    messages.insertAdjacentHTML('afterbegin', html);
+    newMessage.value='';
   },
 
   speak: function(message) {
