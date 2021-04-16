@@ -6,7 +6,7 @@ Rails.application.configure do
 
   ActionCable.server.config.disable_request_forgery_protection = true
   config.action_cable.url = "wss://kkkzmmate-app.herokuapp.com/cable" 
-  config.action_cable.allowed_request_origins = ['https://kkkzmmate-app.herokuapp.com', 'http://【Herokuアプリ名】.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://kkkzmmate-app.herokuapp.com', 'http://kkkzmmate-app.herokuapp.com']
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
